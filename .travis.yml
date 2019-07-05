@@ -1,0 +1,16 @@
+branches:
+  only:
+  - master
+install:
+- echo "Skipping install."
+script:
+- echo "Skipping build. Deploying site to S3"
+deploy:
+  provider: s3
+  region: eu-west-1
+  access_key_id: AKIAJ4VWRMHM3HA5GKIA
+  secret_access_key:
+    secure: VITW5z56q3ueW8x5nIHDn3zrzJb9C71LjxedtY+SVzQNzHoDQ5gf5RHpi3X5kmBCpiwnjHDEDzIT9te9U6YjefQcts20ld+SSkfYkjif2kc52tMz5FRhzXuglpN8MQNRybjwCONurm87LH7vJftVRSCZkQovy/0LhNtA5nlvRV+MK1ddA8GNYjctKdt3z2r2GqvfvJTvwCx8ZII6faSHV9OQ670qHpZw/yrASM8CtcEwE1IptuRUJFoZV8fBVEL1Nq9r4INxORmeqnLcZs/V7FRitfXcTVN34/tFeEooZr9Ga2+hytIU/RBzJqTwXiFBYthOyqUyejoTZ6BRR+KaJ7WPxIweyHyymy0OuoS2fJHABp8lLAlylfZG01kYg6rkm6XzR2V1ulC+5aJ62ceZzDA+IgxRttPjKZUtbuYLwr8CFK9tDf0dW77AUJgA/hf3QfUWAzQ0KVINZ9p+xkASErwrQ0mNsCHR2EqV7YyQYBopxSeuM2+Gcg3gUtMhPLFIf+ig7NHeu3wthHV5XWpiYGFxlf3n42VwV1o60lpwMJC/6TSLdrg7TlNjA3RL+39yom9Aujdwv15OSmpMeClgkTG5QAEpscVKpBqgarO0MutM5eODGzsVgXmIxngFXSKUwMyqBuJJlltVLelVwpBszLj7CxTbrcvsHJ+Cvm5vuCI=
+  bucket: hackerman-2003.xyz
+  on:
+    repo: RossSingleton/rossweb
